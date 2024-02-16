@@ -7,7 +7,7 @@
     <flow-ref doc:name="Business Logic" doc:id="7a43735e-606d-44dd-b97f-9bd472b9fda4" name="BizLogic.COFFEE.ORDERMGT.STATUS.queue"/>
   </flow>
   <flow doc:id="40bb7f49-fce1-4272-943d-7299cd9e194e" name="Ingress.DirectSubscriber.topic">
-    <solace:topic-listener doc:name="Direct Topic Subscriber" doc:id="cb1ee868-0135-4773-bec0-51524905306d" config-ref="Solace_PubSub__Connector_Config" topics="coffeeshop/order/status/v1/inprogress/*/*/*/*" contentType="application/json"/>
+    <solace:topic-listener doc:name="Direct Topic Subscriber " doc:id="cb1ee868-0135-4773-bec0-51524905306d" config-ref="Solace_PubSub__Connector_Config" topics="coffeeshop/order/status/v1/inprogress/*/*/*/*" contentType="application/json"/>
     <json:validate-schema doc:name="Validate JSON schema" doc:id="b2af6cf0-54b1-4d5e-9601-bf965fd894a9" schema="schemas/CoffeeShop-OrderETA_0.2.0.json"/>
     <flow-ref doc:name="Business Logic" doc:id="fbb6949e-bb81-4fc0-b704-d406dcd6e803" name="BizLogic.DirectSubscriber.topic"/>
   </flow>
